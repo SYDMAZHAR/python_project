@@ -1,0 +1,67 @@
+class Organizer:
+    def __init__(self, full_name, email, password):
+        self.full_name = full_name
+        self.email = email
+        self.password = password
+        # Add any other necessary attributes
+
+    def create_event(self, event_details):
+        # Implement event creation logic
+        pass
+
+    def update_event(self, event_id, updated_details):
+        # Implement event update logic
+        pass
+
+    def delete_event(self, event_id):
+        # Implement event deletion logic
+        pass
+
+
+class Member:
+    def __init__(self, full_name, email, password):
+        self.full_name = full_name
+        self.email = email
+        self.password = password
+        # Add any other necessary attributes
+
+    def view_registered_events(self):
+        # Implement logic to view registered events
+        pass
+
+    def register_for_event(self, event_id):
+        # Implement logic for event registration
+        pass
+
+
+class Event:
+    def __init__(self, event_id, name, organizer, start_date, start_time, end_date, end_time, capacity):
+        self.event_id = event_id
+        self.name = name
+        self.organizer = organizer
+        self.start_date = start_date
+        self.start_time = start_time
+        self.end_date = end_date
+        self.end_time = end_time
+        self.capacity = capacity
+        self.users_registered = []  # List to store registered members
+
+    def get_event_details(self):
+        # Implement logic to get event details
+        pass
+
+    def register_member(self, member):
+        # Implement logic to register a member for the event
+        pass
+
+
+import json
+
+def read_json(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
+
+def write_json(file_path, data):
+    with open(file_path, 'w') as file:
+        json.dump(data, file, indent=4)
